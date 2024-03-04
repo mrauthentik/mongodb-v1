@@ -14,6 +14,32 @@ mongoose.connect("mongodb+srv://mrauthentik:Master@cluster0.inuzhbm.mongodb.net/
     console.log('MongoDB Connected Error: ', err)
 });
 
+//Calculation for Years of Experince field
+const yearsOfExperience = req.body.YoE
+
+//Calculating Lv1 and Lv2 base on experience
+
+let lvl2;
+let lvl3;
+
+//calculating for level 2
+if (yearsOfExperience >= 5) {
+    lvl2 = 'Experienced';
+} else if (yearsOfExperience >= 2) {
+    lvl2 = 'Intermediate';
+} else {
+    lvl2 = 'Beginner';
+}
+
+// calculating for Level 3
+if (yearsOfExperience >= 10) {
+    lvl3 = 'Senior';
+} else if (yearsOfExperience >= 5) {
+    lvl3 = 'Mid-level';
+} else {
+    lvl3 = 'Junior';
+}
+
 app.use(express.urlencoded({ extended: false }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
