@@ -5,7 +5,10 @@ const userSchema = new mongoose.Schema({
     lastName: String,
     email: {type: String, unique:true},
     location:String,
-    street: String
+    street: String,
+    lvl2: String,
+    lvl3: String
+    
 })
 
 module.exports = mongoose.model('Users', userSchema)
