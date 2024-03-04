@@ -67,7 +67,8 @@ app.post('/register', async (req, res) => {
             lvl3:lvl3
         });
 
-        await newUser.save();
+       const savedUser = await newUser.save();
+        console.log('User ID:', savedUser._id)
        
         res.redirect('/');
     } catch (error) {
@@ -76,6 +77,11 @@ app.post('/register', async (req, res) => {
         res.redirect('/register');
     }
 });
+
+// Middleware
+app.use(express.json())
+
+app.use('/workers', workersRoutes)
 
 // Error handling middleware
 app.use((err, req, res, next) => {

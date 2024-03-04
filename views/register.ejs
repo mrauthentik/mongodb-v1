@@ -21,40 +21,48 @@
 <body>
   
   <h2>Employee Registration Information Form</h2>
-  
-  <form action="/register" method="post" id="userForm" >
-    <div>
-      <label for="firstName">First Name:</label>
-      <input type="text" id="firstName" name="firstName" required>
-    </div>
-    <div>
-      <label for="lastName">Last Name:</label>
-      <input type="text" id="lastName" name="lastName" required>
-    </div>
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div>
-      <label for="YoE">Years of Experience</label>
-      <input type="number" id="YoE" name="YoE" required>
-    </div>
-    <div>
-      <label for="level2">Level 2:</label>
-      <input type="text" id="level2" name="level2" >
-    </div>
-    <div>
-      <label for="level3">Level 3:</label>
-      <input type="text" id="level3" name="level3" >
-    </div>
-    <div>
-      <label for="location">Location:</label>
-      <input type="text" id="location" name="location" required>
-    </div>
-    <div>
-      <label for="street">Street:</label>
-      <input type="text" id="street" name="street" required>
-    </div>
-    <button type="submit">Submit</button>
-  </form>
+
+  <form action="/register" method="post" id="userForm">
+      <div>
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div>
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+          <label for="YoE">Years of Experience:</label>
+          <input type="number" id="YoE" name="YoE" required>
+      </div>
+      <div>
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required>
+      </div>
+      <div>
+          <label for="street">Street:</label>
+          <input type="text" id="street" name="street" required>
+      </div>
+      <!-- New fields -->
+      <div>
+          <label for="broughtByLvl1">Brought by Level 1 (ID):</label>
+          <input type="text" id="broughtByLvl1" name="broughtByLvl1">
+      </div>
+      <div>
+          <label for="supervisor">Supervisor (ID):</label>
+          <input type="text" id="supervisor" name="supervisor">
+      </div>
+      <div>
+          <label for="superCommissionPermitted">Super Commission Permitted:</label>
+          <input type="checkbox" id="superCommissionPermitted" name="superCommissionPermitted">
+      </div>
+      <div>
+          <label for="IBAN">IBAN:</label>
+          <input type="text" id="IBAN" name="IBAN" title="International Bank Number">
+      </div>
+      <button type="submit">Submit</button>
 </body>
