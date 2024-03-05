@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 
-app.post('/workers', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         // Extract worker data from request body
         const { firstName, lastName, email, location, street } = req.body;
@@ -19,7 +19,7 @@ app.post('/workers', async (req, res) => {
 });
 
 // Add endpoint to edit an existing worker entry by ID
-app.put('/workers/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
         // Extract worker ID from request parameters
         const workerId = req.params.id;
@@ -40,3 +40,5 @@ app.put('/workers/:id', async (req, res) => {
         res.status(500).json({ error: 'Failed to update worker entry' });
     }
 });
+
+module.exports = router;

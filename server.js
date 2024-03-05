@@ -3,6 +3,7 @@ const app = express();
 const User = require('./models/User'); // Assuming you have defined the User model correctly
 const path = require('path');
 const mongoose = require('mongoose');
+const workersRoutes = require('./routes/workers')
 mongoose.connect("mongodb+srv://mrauthentik:Master@cluster0.inuzhbm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
